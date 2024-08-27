@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,7 +23,7 @@ html {
 }
 
 p {
-  color: rgb(255 255 255);
+  color: rgb(255, 255, 255);
 }
 
 /* TRANSITION */
@@ -155,11 +156,9 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
-  box-sizing: border-box;
-  min-height: fit-content;
+  padding: 4vh 10rem;
+  min-height: 100vh; /* Ensures each section takes up the full viewport height */
+  margin-bottom: 4rem; /* Add spacing between sections */
 }
 
 .section-container {
@@ -174,13 +173,11 @@ section {
   gap: 5rem;
   height: 80vh;
 }
-.profile-pic {
 
+.profile-pic {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-
-
 }
 
 .section__pic-container {
@@ -328,15 +325,12 @@ section {
   border-radius: 20%;
   margin: auto 0;
 }
-.section__pic-container1 {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
+
 /* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
+  padding-bottom: 4rem; /* Add padding to avoid overlap with the next section */
 }
 
 .experience-sub-title {
@@ -449,3 +443,51 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* EDUCATION SECTION */
+
+.education-table-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.education-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.education-table th, .education-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  color: black; /* Change font color of table details to black */
+}
+
+.education-table th {
+  background-color: #ff7e5f;
+  color: white; /* Keep the header text color white */
+  font-weight: bold;
+}
+
+.education-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.education-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Table for Smaller Screens */
+@media (max-width: 600px) {
+  .education-table {
+    font-size: 14px;
+  }
+  .education-table th, .education-table td {
+    padding: 8px;
+  }
+}
+
